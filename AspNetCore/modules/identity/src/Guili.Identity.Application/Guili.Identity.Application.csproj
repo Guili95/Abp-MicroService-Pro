@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Guili.Identity.Domain\Guili.Identity.Domain.csproj" />
+        <ProjectReference Include="..\Guili.Identity.Application.Contracts\Guili.Identity.Application.Contracts.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.Identity.Application" Version="$(AbpPackageVersion)" />
+    </ItemGroup>
+
+</Project>

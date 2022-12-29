@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>Guili.SaasService</RootNamespace>
+    </PropertyGroup>
+
+<<<<<<< HEAD
+    <ItemGroup>
+      <PackageReference Include="Volo.Abp.TenantManagement.Domain" Version="$(AbpPackageVersion)" />
+=======
+    <ItemGroup>
+      <PackageReference Include="Volo.Abp.TenantManagement.Domain" Version="$(AbpPackageVersion)" />
+>>>>>>> git/ids4
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Guili.SaasService.Domain.Shared\Guili.SaasService.Domain.Shared.csproj" />
+    </ItemGroup>
+
+</Project>

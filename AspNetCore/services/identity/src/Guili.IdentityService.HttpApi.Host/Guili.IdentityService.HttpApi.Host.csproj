@@ -1,0 +1,69 @@
+<<<<<<< HEAD
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Guili.IdentityService</RootNamespace>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="$(MicrosoftVersion)">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\shared\Guili.Shared.Hosting.Microservices\Guili.Shared.Hosting.Microservices.csproj" />
+    <ProjectReference Include="..\Guili.IdentityService.Application\Guili.IdentityService.Application.csproj" />
+    <ProjectReference Include="..\Guili.IdentityService.EntityFrameworkCore\Guili.IdentityService.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\Guili.IdentityService.HttpApi\Guili.IdentityService.HttpApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+</Project>
+=======
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Guili.IdentityService</RootNamespace>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="$(MicrosoftVersion)">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\shared\Guili.Shared.Hosting.Microservices\Guili.Shared.Hosting.Microservices.csproj" />
+    <ProjectReference Include="..\Guili.IdentityService.Application\Guili.IdentityService.Application.csproj" />
+    <ProjectReference Include="..\Guili.IdentityService.EntityFrameworkCore\Guili.IdentityService.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\Guili.IdentityService.HttpApi\Guili.IdentityService.HttpApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+</Project>
+>>>>>>> git/ids4

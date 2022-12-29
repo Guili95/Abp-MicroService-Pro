@@ -1,0 +1,16 @@
+{
+  "culture": "en",
+  "texts": {
+    "OrganizationUnit": "Organization unit",
+    "OrganizationTree": "Organization tree",
+    "AddRootUnit": "Add root unit",
+    "NewOrganizationUnit": "New organization unit",
+    "EditOrganizationUnit": "Edit organization unit",
+    "ParentOrganizationUnit": "Parent organization unit:",
+    "AddChildOrganizationUnit": "Add child organization unit",
+    "CreateMember": "Create member",
+    "DisplayName:OrganizationUnit": "Organization unit name",
+    "Permission:OrganizationUnitManagement": "Organization Unit Management",
+    "CreateRole": "Create role"
+  }
+}

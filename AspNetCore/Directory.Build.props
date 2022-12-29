@@ -1,0 +1,6 @@
+<Project>
+	<PropertyGroup>
+		<AbpPackageVersion>6.0.0</AbpPackageVersion>
+		<MicrosoftVersion>6.0.11</MicrosoftVersion>
+	</PropertyGroup>
+</Project>

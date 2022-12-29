@@ -1,0 +1,37 @@
+<<<<<<< HEAD
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Yarp.ReverseProxy" Version="1.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Guili.Shared.Hosting.AspNetCore\Guili.Shared.Hosting.AspNetCore.csproj" />
+	</ItemGroup>
+
+</Project>
+=======
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Yarp.ReverseProxy" Version="1.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Guili.Shared.Hosting.AspNetCore\Guili.Shared.Hosting.AspNetCore.csproj" />
+	</ItemGroup>
+
+</Project>
+>>>>>>> git/ids4

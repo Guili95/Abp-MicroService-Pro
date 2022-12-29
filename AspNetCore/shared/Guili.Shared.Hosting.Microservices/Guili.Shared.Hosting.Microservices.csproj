@@ -1,0 +1,67 @@
+<<<<<<< HEAD
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DistributedLock.Redis" Version="1.0.2" />
+    </ItemGroup>
+    
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="$(MicrosoftVersion)" />
+		<PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="$(MicrosoftVersion)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="$(MicrosoftVersion)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.DistributedLocking" Version="$(AbpPackageVersion)" />
+		<PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="$(AbpPackageVersion)" />
+    <PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="$(AbpPackageVersion)" />
+    <PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="$(AbpPackageVersion)" />
+	</ItemGroup>
+    
+	<ItemGroup>
+		<ProjectReference Include="..\..\services\administration\src\Guili.AdministrationService.EntityFrameworkCore\Guili.AdministrationService.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\Guili.Shared.Hosting.AspNetCore\Guili.Shared.Hosting.AspNetCore.csproj" />
+		<ProjectReference Include="..\Guili.Shared.Localization\Guili.Shared.Localization.csproj" />
+	</ItemGroup>
+
+</Project>
+=======
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DistributedLock.Redis" Version="1.0.2" />
+    </ItemGroup>
+    
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="$(MicrosoftVersion)" />
+		<PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="$(MicrosoftVersion)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="$(MicrosoftVersion)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.DistributedLocking" Version="$(AbpPackageVersion)" />
+		<PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="$(AbpPackageVersion)" />
+    <PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="$(AbpPackageVersion)" />
+    <PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="$(AbpPackageVersion)" />
+	</ItemGroup>
+    
+	<ItemGroup>
+		<ProjectReference Include="..\..\services\administration\src\Guili.AdministrationService.EntityFrameworkCore\Guili.AdministrationService.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\Guili.Shared.Hosting.AspNetCore\Guili.Shared.Hosting.AspNetCore.csproj" />
+		<ProjectReference Include="..\Guili.Shared.Localization\Guili.Shared.Localization.csproj" />
+	</ItemGroup>
+
+</Project>
+>>>>>>> git/ids4

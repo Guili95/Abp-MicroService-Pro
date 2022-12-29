@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>Guili.SaasService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="$(AbpPackageVersion)" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Guili.SaasService.Domain\Guili.SaasService.Domain.csproj" />
+        <ProjectReference Include="..\Guili.SaasService.Application.Contracts\Guili.SaasService.Application.Contracts.csproj" />
+    </ItemGroup>
+
+</Project>

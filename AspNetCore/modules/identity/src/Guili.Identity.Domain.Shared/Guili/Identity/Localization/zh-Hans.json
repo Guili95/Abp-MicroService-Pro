@@ -1,0 +1,16 @@
+{
+  "culture": "zh-Hans",
+  "texts": {
+    "OrganizationUnit": "组织机构",
+    "OrganizationTree": "组织机构树",
+    "AddRootUnit": "添加根机构",
+    "NewOrganizationUnit": "新组织机构",
+    "EditOrganizationUnit": "编辑组织机构",
+    "ParentOrganizationUnit": "父组织机构：",
+    "AddChildOrganizationUnit": "添加子机构",
+    "CreateMember": "添加成员",
+    "DisplayName:OrganizationUnit": "组织机构名称",
+    "Permission:OrganizationUnitManagement": "组织机构管理",
+    "CreateRole": "添加角色"
+  }
+}
