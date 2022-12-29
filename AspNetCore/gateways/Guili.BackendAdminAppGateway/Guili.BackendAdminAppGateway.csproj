@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <Import Project="..\..\common.props" />
 
@@ -26,32 +25,3 @@
     </ItemGroup>
   
 </Project>
-=======
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
-    <Import Project="..\..\common.props" />
-
-    <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <UserSecretsId>88acd401-85df-4e92-bc68-9e060ff9b811</UserSecretsId>
-        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        <DockerfileContext>..\..</DockerfileContext>
-    </PropertyGroup>
-
-    <ItemGroup>
-        <ProjectReference Include="..\..\shared\Guili.Shared.Hosting.Gateways\Guili.Shared.Hosting.Gateways.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <Compile Remove="Logs\**" />
-        <Content Remove="Logs\**" />
-        <EmbeddedResource Remove="Logs\**" />
-        <None Remove="Logs\**" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
-    </ItemGroup>
-  
-</Project>
->>>>>>> git/ids4

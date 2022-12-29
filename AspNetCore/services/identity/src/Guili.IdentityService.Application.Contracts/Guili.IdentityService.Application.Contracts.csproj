@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\..\..\common.props" />
@@ -14,20 +13,4 @@
   </ItemGroup>
 
 </Project>
-=======
-﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\..\..\..\common.props" />
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>Guili.IdentityService</RootNamespace>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\modules\identity\src\Guili.Identity.Application.Contracts\Guili.Identity.Application.Contracts.csproj" />
-    <ProjectReference Include="..\Guili.IdentityService.Domain.Shared\Guili.IdentityService.Domain.Shared.csproj" />
-  </ItemGroup>
-
-</Project>
->>>>>>> git/ids4

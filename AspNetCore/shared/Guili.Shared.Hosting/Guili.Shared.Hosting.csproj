@@ -1,41 +1,19 @@
-<<<<<<< HEAD
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <Import Project="..\..\common.props" />
+  <Import Project="..\..\common.props" />
 
-	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<RootNamespace>Guili.Shared.Hosting</RootNamespace>
-	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Guili.Shared.Hosting</RootNamespace>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
-    </ItemGroup>
-    
-	<ItemGroup>
-	  <PackageReference Include="Volo.Abp.Autofac" Version="$(AbpPackageVersion)" />
-	  <PackageReference Include="Volo.Abp.Data" Version="$(AbpPackageVersion)" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+  </ItemGroup>
 
-</Project>
-=======
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-    <Import Project="..\..\common.props" />
-
-	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<RootNamespace>Guili.Shared.Hosting</RootNamespace>
-	</PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
-    </ItemGroup>
-    
-	<ItemGroup>
-	  <PackageReference Include="Volo.Abp.Autofac" Version="$(AbpPackageVersion)" />
-	  <PackageReference Include="Volo.Abp.Data" Version="$(AbpPackageVersion)" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Autofac" Version="$(AbpPackageVersion)" />
+    <PackageReference Include="Volo.Abp.Data" Version="$(AbpPackageVersion)" />
+  </ItemGroup>
 
 </Project>
->>>>>>> git/ids4

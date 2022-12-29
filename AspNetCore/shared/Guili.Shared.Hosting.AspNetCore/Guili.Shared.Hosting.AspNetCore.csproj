@@ -1,53 +1,25 @@
-<<<<<<< HEAD
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <Import Project="..\..\common.props" />
+  <Import Project="..\..\common.props" />
 
-	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
-		<RootNamespace>Guili.Shared.Hosting.AspNetCore</RootNamespace>
-	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Guili.Shared.Hosting.AspNetCore</RootNamespace>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
-        <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.4.1" />
-        <PackageReference Include="prometheus-net.AspNetCore" Version="7.0.0" />
-    </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.4.1" />
+    <PackageReference Include="prometheus-net.AspNetCore" Version="7.0.0" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="$(AbpPackageVersion)" />
-		<PackageReference Include="Volo.Abp.Swashbuckle" Version="$(AbpPackageVersion)" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="$(AbpPackageVersion)" />
+    <PackageReference Include="Volo.Abp.Swashbuckle" Version="$(AbpPackageVersion)" />
+  </ItemGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="..\Guili.Shared.Hosting\Guili.Shared.Hosting.csproj" />
-	</ItemGroup>
-
-</Project>
-=======
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-    <Import Project="..\..\common.props" />
-
-	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
-		<RootNamespace>Guili.Shared.Hosting.AspNetCore</RootNamespace>
-	</PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
-        <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.4.1" />
-        <PackageReference Include="prometheus-net.AspNetCore" Version="7.0.0" />
-    </ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="$(AbpPackageVersion)" />
-		<PackageReference Include="Volo.Abp.Swashbuckle" Version="$(AbpPackageVersion)" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\Guili.Shared.Hosting\Guili.Shared.Hosting.csproj" />
-	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Guili.Shared.Hosting\Guili.Shared.Hosting.csproj" />
+  </ItemGroup>
 
 </Project>
->>>>>>> git/ids4

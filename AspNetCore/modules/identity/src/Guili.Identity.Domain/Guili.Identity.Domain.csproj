@@ -1,23 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <Import Project="..\..\..\..\common.props" />
+  <Import Project="..\..\..\..\common.props" />
 
-    <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
-        <RootNamespace />
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
 
-<<<<<<< HEAD
-    <ItemGroup>
-      <PackageReference Include="Volo.Abp.Identity.Domain" Version="$(AbpPackageVersion)" />
-=======
-    <ItemGroup>
-      <PackageReference Include="Volo.Abp.Identity.Domain" Version="$(AbpPackageVersion)" />
->>>>>>> git/ids4
-    </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Identity.Domain" Version="$(AbpPackageVersion)" />
+  </ItemGroup>
 
-    <ItemGroup>
-        <ProjectReference Include="..\Guili.Identity.Domain.Shared\Guili.Identity.Domain.Shared.csproj" />
-    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Guili.Identity.Domain.Shared\Guili.Identity.Domain.Shared.csproj" />
+  </ItemGroup>
 
 </Project>
