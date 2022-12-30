@@ -1,5 +1,4 @@
-﻿using Autofac.Core;
-using Guili;
+﻿using Guili;
 using Guili.AdministrationService.EntityFrameworkCore;
 using Guili.IdentityService.EntityFrameworkCore;
 using Guili.Shared.Hosting.AspNetCore;
@@ -55,6 +54,8 @@ namespace AuthServer
             PreConfigure<ForwardedHeadersOptions>(options =>
             {
                 options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+                options.KnownNetworks.Clear();
+                options.KnownProxies.Clear();
             });
 
             var hostingEnvironment = context.Services.GetHostingEnvironment();
@@ -90,8 +91,6 @@ namespace AuthServer
                     options.Audience = "AccountService";
                 });
 
-            Configure<IdentityServerOptions>(options => { options.IssuerUri = configuration["App:SelfUrl"]; });
-
             Configure<AbpAuditingOptions>(options => { options.ApplicationName = "AuthServer"; });
 
             Configure<IdentityServerOptions>(options =>
@@ -118,14 +117,7 @@ namespace AuthServer
 
             var configuration = context.ServiceProvider.GetRequiredService<IConfiguration>();
 
-            var forwardOptions = new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
-            };
-
-            forwardOptions.KnownNetworks.Clear();
-            forwardOptions.KnownProxies.Clear();
-            app.UseForwardedHeaders(forwardOptions);
+            app.UseForwardedHeaders();
 
             app.Use(async (ctx, next) =>
             {
