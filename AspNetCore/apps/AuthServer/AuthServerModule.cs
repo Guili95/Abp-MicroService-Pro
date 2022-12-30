@@ -118,6 +118,8 @@ namespace AuthServer
 
             var configuration = context.ServiceProvider.GetRequiredService<IConfiguration>();
 
+            app.UseForwardedHeaders();
+
             app.Use(async (ctx, next) =>
             {
                 if (ctx.Request.Headers.ContainsKey("from-ingress"))
@@ -139,7 +141,6 @@ namespace AuthServer
             {
                 IdentityModelEventSource.ShowPII = true;
             }
-            app.UseForwardedHeaders();
             app.UseCorrelationId();
             app.UseStaticFiles();
             app.UseRouting();
