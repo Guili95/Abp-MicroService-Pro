@@ -5,7 +5,9 @@ using Guili.Shared.Hosting.AspNetCore;
 using Guili.Shared.Hosting.Microservices;
 using IdentityServer4.Configuration;
 using IdentityServer4.Extensions;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
@@ -77,6 +79,10 @@ namespace AuthServer
             ConfigureSwagger(context, configuration);
 
             context.Services.AddAuthentication()
+                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+                {
+                    options.Cookie.Domain = "threebody.shop";
+                })
                 .AddJwtBearer(options =>
                 {
                     options.Authority = configuration["AuthServer:Authority"];

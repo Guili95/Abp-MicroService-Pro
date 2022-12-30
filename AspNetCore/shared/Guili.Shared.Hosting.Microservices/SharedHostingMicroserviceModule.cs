@@ -47,6 +47,7 @@ namespace Guili.Shared.Hosting.Microservices
             {
                 //HTTP 标头。默认命名：RequestVerificationToke（如果更改，前端也要改）
                 options.HeaderName = "RequestVerificationToken";
+                options.Cookie.Domain = "threebody.shop";
             });
 
             //abp 防伪选项
