@@ -7,6 +7,7 @@ using IdentityServer4.Configuration;
 using IdentityServer4.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -101,7 +102,7 @@ namespace AuthServer
             });
 
             #if DEBUG
-                        context.Services.Replace(ServiceDescriptor.Singleton<IEmailSender, NullEmailSender>());
+                context.Services.Replace(ServiceDescriptor.Singleton<IEmailSender, NullEmailSender>());
             #endif
         }
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
@@ -125,6 +126,12 @@ namespace AuthServer
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
+
 
             app.UseAbpRequestLocalization();
 
