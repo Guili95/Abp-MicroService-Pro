@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Guili.Shared.Hosting.Microservices.WrapResult.Results.Wrapping
@@ -8,14 +7,3 @@ namespace Guili.Shared.Hosting.Microservices.WrapResult.Results.Wrapping
         void Wrap(FilterContext context);
     }
 }
-=======
-﻿using Microsoft.AspNetCore.Mvc.Filters;
-
-namespace Guili.Shared.Hosting.Microservices.WrapResult.Results.Wrapping
-{
-    public interface IGuiliActionResultWrapper
-    {
-        void Wrap(FilterContext context);
-    }
-}
->>>>>>> git/ids4
