@@ -1,5 +1,4 @@
-﻿using Autofac.Core;
-using Guili;
+﻿using Guili;
 using Guili.AdministrationService.EntityFrameworkCore;
 using Guili.IdentityService.EntityFrameworkCore;
 using Guili.Shared.Hosting.AspNetCore;
@@ -86,6 +85,11 @@ namespace AuthServer
                 });
 
             Configure<AbpAuditingOptions>(options => { options.ApplicationName = "AuthServer"; });
+
+            context.Services.ConfigureApplicationCookie(options =>
+            {
+                options.Cookie.Domain = "threebody.shop";
+            });
 
             Configure<IdentityServerOptions>(options =>
             {
