@@ -59,6 +59,7 @@ namespace Guili.Shared.Hosting.Microservices
                 options.TokenCookie.Expiration = TimeSpan.FromDays(365);
                 //应用程序使用的身份验证 cookie 的名称。默认值为 Identity.Application
                 options.AuthCookieSchemaName = "Identity.Application";
+                options.TokenCookie.Domain = "threebody.shop";
                 ////忽略指定命名空间中的控制器类型
                 //options.AutoValidateFilter = type => !type.Namespace.StartsWith("MyProject.MyIgnoredNamespace");
                 ////默认“GET”、“HEAD”、“TRACE”、“OPTIONS”
