@@ -8,7 +8,7 @@ import { TOKEN_KEY } from '/@/enums/cacheEnum';
 const host = location.origin;
 
 const userManager: UserManager = new Oidc.UserManager({
-  authority: 'https://auth.threebody.shop',
+  authority: 'http://47.122.44.107:8082',
   client_id: 'ABPMicroServiceProAdmin',
   redirect_uri: encodeURI(`${host}/#/oidcSignIn`),
   response_type: 'code',
