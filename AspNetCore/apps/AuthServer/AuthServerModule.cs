@@ -78,6 +78,11 @@ namespace AuthServer
             ConfigureSameSiteCookiePolicy(context);
             ConfigureSwagger(context, configuration);
 
+            context.Services.AddIdentityServer(o =>
+            {
+                o.Authentication.CheckSessionCookieDomain = "threebody.shop";
+            });
+
             context.Services.AddAuthentication()
                 .AddCookie(o => {
                     o.Cookie.Domain = "threebody.shop";
