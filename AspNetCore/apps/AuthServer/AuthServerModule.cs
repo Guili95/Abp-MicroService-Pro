@@ -52,6 +52,11 @@ namespace AuthServer
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
+            PreConfigure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+            });
+
             var hostingEnvironment = context.Services.GetHostingEnvironment();
 
             if (!hostingEnvironment.IsDevelopment())
@@ -73,11 +78,6 @@ namespace AuthServer
         {
             var hostingEnvironment = context.Services.GetHostingEnvironment();
             var configuration = context.Services.GetConfiguration();
-
-            context.Services.Configure<ForwardedHeadersOptions>(options =>
-            {
-                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
-            });
 
             ConfigureSameSiteCookiePolicy(context);
             ConfigureSwagger(context, configuration);
@@ -118,7 +118,14 @@ namespace AuthServer
 
             var configuration = context.ServiceProvider.GetRequiredService<IConfiguration>();
 
-            app.UseForwardedHeaders();
+            var forwardOptions = new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
+            };
+
+            forwardOptions.KnownNetworks.Clear();
+            forwardOptions.KnownProxies.Clear();
+            app.UseForwardedHeaders(forwardOptions);
 
             app.Use(async (ctx, next) =>
             {
