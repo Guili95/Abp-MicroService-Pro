@@ -11,10 +11,12 @@ namespace AuthServer
             services.Configure<CookiePolicyOptions>(options =>
             {
                 options.MinimumSameSitePolicy = SameSiteMode.Unspecified;
+                options.ConsentCookie.Domain = "threebody.shop";
                 options.OnAppendCookie = cookieContext =>
                     CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
                 options.OnDeleteCookie = cookieContext =>
                     CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
+
             });
 
             return services;
