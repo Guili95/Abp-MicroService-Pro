@@ -79,9 +79,8 @@ namespace AuthServer
             ConfigureSwagger(context, configuration);
 
             context.Services.AddAuthentication()
-                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
-                {
-                    options.Cookie.Domain = "threebody.shop";
+                .AddCookie(o => {
+                    o.Cookie.Domain = "threebody.shop";
                 })
                 .AddJwtBearer(options =>
                 {
