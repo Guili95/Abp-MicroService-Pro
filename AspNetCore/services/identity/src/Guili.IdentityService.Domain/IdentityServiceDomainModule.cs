@@ -1,5 +1,4 @@
 ﻿using Guili.Identity;
-using Volo.Abp.Identity;
 using Volo.Abp.IdentityServer;
 using Volo.Abp.Modularity;
 
@@ -12,5 +11,8 @@ namespace Guili.IdentityService
     )]
     public class IdentityServiceDomainModule : AbpModule
     {
+        public override void ConfigureServices(ServiceConfigurationContext context)
+        {
+        }
     }
 }
