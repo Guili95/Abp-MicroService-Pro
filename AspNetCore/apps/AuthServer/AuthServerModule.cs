@@ -1,4 +1,5 @@
-﻿using Guili;
+﻿using Autofac.Core;
+using Guili;
 using Guili.AdministrationService.EntityFrameworkCore;
 using Guili.IdentityService.EntityFrameworkCore;
 using Guili.Shared.Hosting.AspNetCore;
@@ -92,6 +93,7 @@ namespace AuthServer
                 options.UserInteraction.ConsentUrl = "/Consent";
                 options.UserInteraction.ErrorUrl = configuration["IdentityServerOptions:ErrorUrl"];
                 options.UserInteraction.LogoutUrl = configuration["IdentityServerOptions:LogoutUrl"];
+                options.Authentication.CheckSessionCookieDomain = "threebody.shop";
             });
 
             Configure<AppUrlOptions>(options =>
