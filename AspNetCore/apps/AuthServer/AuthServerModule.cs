@@ -51,13 +51,6 @@ namespace AuthServer
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
-            PreConfigure<ForwardedHeadersOptions>(options =>
-            {
-                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
-                options.KnownNetworks.Clear();
-                options.KnownProxies.Clear();
-            });
-
             var hostingEnvironment = context.Services.GetHostingEnvironment();
 
             if (!hostingEnvironment.IsDevelopment())
@@ -117,7 +110,15 @@ namespace AuthServer
 
             var configuration = context.ServiceProvider.GetRequiredService<IConfiguration>();
 
-            app.UseForwardedHeaders();
+            var forwardOptions = new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
+            };
+
+            forwardOptions.KnownNetworks.Clear();
+            forwardOptions.KnownProxies.Clear();
+
+            app.UseForwardedHeaders(forwardOptions);
 
             app.Use(async (ctx, next) =>
             {
