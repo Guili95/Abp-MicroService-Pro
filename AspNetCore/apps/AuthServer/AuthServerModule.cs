@@ -1,4 +1,5 @@
-﻿using Guili;
+﻿using Autofac.Core;
+using Guili;
 using Guili.AdministrationService.EntityFrameworkCore;
 using Guili.IdentityService.EntityFrameworkCore;
 using Guili.Shared.Hosting.AspNetCore;
@@ -73,6 +74,11 @@ namespace AuthServer
             var hostingEnvironment = context.Services.GetHostingEnvironment();
             var configuration = context.Services.GetConfiguration();
 
+            context.Services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+            });
+
             ConfigureSameSiteCookiePolicy(context);
             ConfigureSwagger(context, configuration);
 
@@ -127,18 +133,13 @@ namespace AuthServer
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-            });
-
-
             app.UseAbpRequestLocalization();
 
             if (env.IsDevelopment())
             {
                 IdentityModelEventSource.ShowPII = true;
             }
+            app.UseForwardedHeaders();
             app.UseCorrelationId();
             app.UseStaticFiles();
             app.UseRouting();
